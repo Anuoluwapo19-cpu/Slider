@@ -3,6 +3,14 @@ const prevButton = document.querySelector("#prevBtn");
 const nextButton = document.querySelector("#nextBtn");
 const pagination = document.querySelector("#pagination");
 
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active")
+})
+
 const images = [
   "https://davidjoelschools.com/images/log1.png",
   "https://davidjoelschools.com/images/log30.jpeg",

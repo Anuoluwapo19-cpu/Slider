@@ -1,3 +1,90 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #000;;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+}
+.hamburger{
+    display: none;
+    width: 30px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        align-items: center;
+    }
+
+    nav > div {
+        order: 1;
+    }
+
+    .hamburger{
+        display: block;
+        order: 2;
+        margin-left: auto;
+        padding: 0;
+    }
+
+    .nav-links{
+        display: none;
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+}
+
 .slider {
     position: relative;
     width: 600px;
