@@ -1,10 +1,22 @@
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
     padding: 30px;
+    box-sizing: border-box;
 }
 
-ul {
+nav h1 {
+    margin: 0;
+}
+
+
+.nav-links {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -13,13 +25,14 @@ ul {
     list-style: none;
 }
 
-a {
+.nav-links a {
     color: #000;;
     font-family: "Inter", sans-serif;
     font-size: 18px;
     line-height: 24px;
     text-decoration: none;
 }
+
 .hamburger{
     display: none;
     width: 30px;
@@ -50,14 +63,18 @@ a {
     transform: rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
-    nav{
+    nav {
+        width: 100%;
+        max-width: none;
+        padding: 20px 30px;
         display: flex;
         flex-wrap: wrap;
-        padding: 20px;
         align-items: center;
+      
     }
+
 
     nav > div {
         order: 1;
@@ -67,7 +84,7 @@ a {
         display: block;
         order: 2;
         margin-left: auto;
-        padding: 0;
+        
     }
 
     .nav-links{
@@ -83,7 +100,30 @@ a {
     .nav-links.active{
         display: flex;
     }
+
+     .slider {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .slider-image img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+    }
 }
+
+@media screen and (max-width: 410px){
+    nav {
+    padding: 10px 20px;
+  }
+
+   nav h1 {
+        font-size: 24px;
+    }
+}
+
 
 .slider {
     position: relative;
