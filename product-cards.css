@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.products {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.products h1 {
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.carousel-window {
+  flex: 1;
+  overflow: hidden;
+}
+
+.product-track {
+  display: flex;
+  gap: 20px;
+}
+
+#prevBtn,
+#nextBtn {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.product-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product-card h2 {
+  font-size: 20px;
+}
+
+.product-card p {
+  color: #555;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.product-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ========================
+  TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+  .product-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
+
+/* =====================
+   MOBILE    
+===================== */
+@media (max-width: 600px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  .carousel {
+    gap: 8px;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .product-track {
+    gap: 15px;
+  }
+
+  .product-card {
+    flex: 0 0 100%;
+    padding: 20px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .product-card h2 {
+    font-size: 18px;
+  }
+
+  .product-card .price {
+    font-size: 16px;
+  }
+}
+
+/* ========================
+  SMALL PHONES
+ ======================== */
+
+@media (max-width: 400px) {
+  .carousel {
+    gap: 5px;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card img {
+    height: 170px;
+  }
+}
